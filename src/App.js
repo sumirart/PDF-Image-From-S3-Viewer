@@ -10,11 +10,11 @@ function App() {
     <div className="App">
       <form className="form">
         <input className="input" type="text"
-          placeholder="Masukan link Ijazah di sini"
+          placeholder="Insert S3 Image/PDF URL here"
           name="url" value={file} onChange={e => setFile(e.target.value)}></input>
       </form>
       <p>{file ? file : 'Photo by Clément Falize on Unsplash'}</p>
-      <img src={file ? file : cat} alt="PDF tuh. Tunggu lagi loading. Kalau lama coba cut trus paste lagi ya" width="1080"></img>
+      <img src={file ? file : cat} alt="The link might be a PDF, please wait. Or try re-paste the URL." width="1080"></img>
       {file ?
         <iframe title="pdf viewer"
           src={`https://docs.google.com/viewer?url=${file}&embedded=true`}>
